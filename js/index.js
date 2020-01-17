@@ -41,13 +41,23 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-Array.from(document.querySelectorAll('a')).forEach(element => {
-  element.textContent = (siteContent['nav'])
-})
 
 
+// NavBar
+let navBarLinks = document.querySelectorAll('a')
+navBarLinks[0].textContent = siteContent['nav']['nav-item-1']
+navBarLinks[1].textContent = siteContent['nav']['nav-item-2']
+navBarLinks[2].textContent = siteContent['nav']['nav-item-3']
+navBarLinks[3].textContent = siteContent['nav']['nav-item-4']
+navBarLinks[4].textContent = siteContent['nav']['nav-item-5']
+navBarLinks[5].textContent = siteContent['nav']['nav-item-6']
+
+
+
+// Call to action
 const mainH1 = document.querySelector('h1');
 mainH1.textContent = (siteContent['cta']['h1']);
+mainH1.style = 'line-height: 1.25;word-spacing: 70px;width: min-content;'
 
 const btn = document.querySelector("button");
 btn.textContent = (siteContent["cta"]['button']);
@@ -55,12 +65,34 @@ btn.textContent = (siteContent["cta"]['button']);
 let ctaImage = document.getElementById('cta-img');
 ctaImage.setAttribute('src', siteContent['cta']['img-src']);
 
-let topContentLeftH4 = document.querySelector('h4');
-topContentLeftH4.textContent = (siteContent['main-content']['features-h4']);
 
-let topContentLeftContent = document.querySelector('h4');
-topContentLeftContent.textContent = (siteContent['main-content']['features-content']);
 
+// Page content headers
+let pageH4 = document.querySelectorAll('h4');
+pageH4[0].textContent = siteContent['main-content']['features-h4']
+pageH4[1].textContent = siteContent['main-content']['about-h4']
+pageH4[2].textContent = siteContent['main-content']['services-h4']
+pageH4[3].textContent = siteContent['main-content']['product-h4']
+pageH4[4].textContent = siteContent['main-content']['vision-h4']
+pageH4[5].textContent = siteContent['contact']['contact-h4']
+
+
+
+// Page content
+let pageContent = document.querySelectorAll('p')
+pageContent[0].textContent = siteContent['main-content']['features-content']
+pageContent[1].textContent = siteContent['main-content']['about-content']
+pageContent[2].textContent = siteContent['main-content']['services-content']
+pageContent[3].textContent = siteContent['main-content']['product-content']
+pageContent[4].textContent = siteContent['main-content']['vision-content']
+pageContent[5].textContent = siteContent['contact']['address']
+pageContent[5].style = 'width: 200px;line-height: 1.35;'
+pageContent[6].textContent = siteContent['contact']['phone']
+pageContent[7].textContent = siteContent['contact']['email']
+pageContent[8].textContent = siteContent['footer']['copyright']
+
+
+
+// Middle image
 let middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
