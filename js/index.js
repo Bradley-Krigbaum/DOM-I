@@ -55,20 +55,17 @@ navBarLinks[5].textContent = siteContent['nav']['nav-item-6']
 // Prepend and Append new links
 const parentNav = document.querySelector('nav')
 const newLink = document.createElement('a');
-
-newLink.innerHTML = 'Home';
-newLink.style.color = 'green';
-
 const newLink2 = document.createElement('a');
 
+newLink.innerHTML = 'Home';
 newLink2.innerHTML = 'End';
-newLink2.style.color = 'green';
 
 parentNav.prepend(newLink);
-parentNav.append(newLink2)
+parentNav.appendChild(newLink2)
 
 // Change color of all links to green
-navBarLinks.forEach(element => {
+const navColor = document.querySelectorAll('a')
+navColor.forEach(element => {
   element.style.color = 'green';
 })
 
