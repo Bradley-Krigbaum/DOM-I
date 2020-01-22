@@ -52,6 +52,11 @@ navBarLinks[3].textContent = siteContent['nav']['nav-item-4']
 navBarLinks[4].textContent = siteContent['nav']['nav-item-5']
 navBarLinks[5].textContent = siteContent['nav']['nav-item-6']
 
+// Change color to green
+navBarLinks.forEach(element => {
+  element.style.color = 'green';
+})
+
 
 
 // Call to action
